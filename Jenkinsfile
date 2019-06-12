@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'python:3.7.3' } }
+  agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
       steps {
@@ -9,7 +9,12 @@ pipeline {
     stage('test') {
       steps {
         sh 'python test.py'
-      }   
+      }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
+      }    
     }
   }
 }
