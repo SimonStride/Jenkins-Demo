@@ -15,6 +15,6 @@ def hello_user(username):
     return f'Hello {proper(username)}!\n'
 
 if __name__ == '__main__':
-    app.run(host='localhost', debug=True)     # open for everyone
+    app.run(host='0.0.0.0', debug=True)     # open for everyone
 
 # Credit to https://medium.com/@Joachim8675309/jenkins-ci-pipeline-with-python-8bf1a0234ec3
