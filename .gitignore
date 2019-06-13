@@ -1,6 +1,4 @@
 env/*
 test-reports/*
 *.pyc
-*/*.pyc
-*/*.*.pyc
-__pycache__/*
+__pycache__/app.cpython-37.pyc
